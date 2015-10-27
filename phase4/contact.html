@@ -1,0 +1,186 @@
+<html>
+	<head>
+		<title>Contact DIA2</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<link rel="icon" type="image/png" href="http://www.dia2.org/favicon-16x16.png" ></link>
+		<link href="css/styles.css" type="text/css" rel="stylesheet"></link>
+		<link href="css/contact.css" type="text/css" rel="stylesheet"></link>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<div id="banner">
+					<div class="logo_cont">
+          	<a href="http://www.dia2.org/">
+							<img class="logo" src="images/DIA2%20New%20Logo.png" alt="DIA2" title="DIA2" />
+						</a>
+					</div>
+          <h2 class="tagline">
+          Deep Insights Anytime, Anywhere
+          </h2>
+        </div>
+        <ul id="nav" class="">
+          <li class="nav_item">
+            <a class="nav_link" href="http://www.dia2.org/about.html">About</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav_link here" href="#" id="contact">Contact</a>
+          </li>
+					<!--
+          <li class="nav_item">
+            <a class="nav_link" href="#">Feedback</a>
+          </li>
+					-->
+        </ul>
+			</div>
+			<div id="fold">
+				<div id="gradient"></div>
+				<div class="dots"></div>
+				<div class="center_child">
+					<div class="center_me">
+						<h1 class="page_title">Contact the DIA2 Team</h1>
+						<div class="about_underline"></div>
+						<div id="contactWindow">
+							<div id="contactModal">
+								<!-- <span id="closeModal">&#10005;</span> -->
+								<form action="" method="post">
+									<fieldset>
+										<!-- <legend>Contact Us</legend> -->
+												<label for="name">Name:</label>
+												<input name="name" id="contactName" type="text" />
+												<label for="email">Email:</label>
+												<input type="email" id="contactEmail" name="email" />
+												<label for="message">Message:</label>
+												<textarea name="message" id="contactMessage"></textarea>
+					</fieldset>
+					<!-- <input type="submit" value="Send" id="contactSend" /> -->
+					<!-- <button id="cancelMsg" type="button">Cancel</button> -->
+					<button id="sendMsg" type="button">Send</button>
+				</form>
+				<div id="emailResult"></div>
+			</div>
+		</div>
+					</div>
+				</div>
+			</div>
+			<div class="about" id="footer">
+				<!--
+        <ul id="footer_links" class="">
+          <li class="footer_item">
+            <a class="footer_a" src="#">About</a>
+          </li><!--
+          --<li  class="footer_item">
+            <a class="footer_a" src="#">Career</a>
+          </li><!--
+          --<li class="footer_item">
+            <a class="footer_a" src="#">Privacy</a>
+          </li><!--
+          --<li class="footer_item">
+            <a class="footer_a" src="#">API</a>
+          </li><!--
+          --<li class="footer_item">
+            <a class="footer_a" src="#">Terms</a>
+          </li><!--
+          --<li class="footer_item">
+            <a class="footer_a" src="#">Legal</a>
+          </li><!--
+          --<li class="footer_item">
+            <a class="footer_a" src="#">Contact</a>
+          </li>
+        </ul>
+				-->
+        <div id="copyright" class="openSans">Copyright 2015 DIA2 Project, All rights reserved.</div>
+      </div>
+		</div>
+		<script>
+			
+			var contactBtn;
+			var contactModal;
+			var contactResult;
+			
+			function sendEmail(e){
+				e.preventDefault();
+				
+				if(!(validate() && checkName()))
+					return;
+				
+				var req = {
+					"name": document.getElementById("contactName").value,
+					"email": document.getElementById("contactEmail").value,
+					"message": document.getElementById("contactMessage").value
+				};
+								
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open("POST", "contact.php", true);
+				xmlhttp.setRequestHeader("Content-Type", "application/json");
+				xmlhttp.send(JSON.stringify(req));
+				
+				xmlhttp.onreadystatechange = function(){
+					if(xmlhttp.readyState == 4){
+						if(xmlhttp.status == 200 || xmlhttp.status == 304){
+							contactModal.className = "show result";
+							if(this.responseText.indexOf("sent") > 0){
+			contactResult.innerHTML = "<p>The DIA2 team has received your email. Thanks for contacting us!</p><p>We'll redirect you back to the homepage in a moment...</p>";
+								
+								setTimeout(function(){
+									window.open("http://www.dia2.org", "_self");
+								}, 4000);
+							}
+							else
+								contactResult.innerHTML = "<p>Your email couldn't be sent. Please try again later.</p>";
+							console.log(this.responseText);
+						}
+					}
+				}
+			}
+			
+			function checkName(){
+				var reg = /[^A-Za-z0-9_'-\s]/gi;
+				var ws = /\s\s+/g;
+				
+				var name = document.getElementById("contactName");
+				
+				name.value = name.value.replace(reg, '');
+				name.value = name.value.replace(ws, ' ');
+				
+				var valid = name.value.length > 0;
+				
+				validationResult(name, valid);
+				
+				return valid;
+			}
+			
+			function validate(){
+				var reg = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+				
+				var email = document.getElementById("contactEmail");
+				
+				var valid = reg.test(email.value);
+				
+				validationResult(email, valid);
+				
+				return valid;
+			}
+				
+			function validationResult(el, b){
+				if(b)
+					el.style.backgroundColor = "#8AEA8A";
+				else
+					el.style.backgroundColor = "#FAADAD"; 
+			}
+			
+			function ready(){
+				contactBtn = document.getElementById("contact");
+				contactModal = document.getElementById("contactWindow");
+				contactResult = document.getElementById("emailResult");		
+				document.getElementById("contactName").addEventListener("change", checkName);
+				
+				document.getElementById("contactEmail").addEventListener("change", validate);
+				
+				document.getElementById("sendMsg").addEventListener("click", function(e){ sendEmail(e); });
+			}
+			
+			window.onload = ready;
+		</script>
+	</body>
+</html>

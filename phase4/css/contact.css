@@ -1,0 +1,46 @@
+#fold {
+	/* height: 428px; */
+	height: 100%;
+	width: 100%;
+	min-height: 428px;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+#gradient {
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	margin: 0;
+	background: #448660; /* Old browsers */ /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#448660), color-stop(50%,#20aeae), color-stop(100%,#3e4d7f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  #448660 0%,#20aeae 50%,#3e4d7f 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
+	background: -webkit-linear-gradient(45deg, #448660 0%, #20aeae 50%, #3e4d7f 100%);
+	background: linear-gradient(45deg,  #448660 0%,#20aeae 50%,#3e4d7f 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448660', endColorstr='#3e4d7f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	opacity: .9;
+}
+
+.dots {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	background: url('../images/dot_background.png');
+	background-repeat: repeat;
+}
+
+.center_me {
+	padding: 50px 0 0;
+}
+
+.page_title {
+	font-size: 55px;
+	font-weight: 600;
+	line-height: 55px;
+	position: relative;
+	color: #FFFFFF;
+	text-align: center;
+	margin: 0 auto 40px;
+}

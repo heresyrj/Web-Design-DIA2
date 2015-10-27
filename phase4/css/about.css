@@ -1,0 +1,159 @@
+#copy {
+	background-color: #F5F5F5;
+	padding: 40px;
+}
+
+.page_title {
+	color: #505050;
+	font-size: 34pt;
+	font-weight: 600;
+}
+
+.aboutCopy {
+	color: #505050;
+	font-size: 18pt;
+	font-weight: 400;
+}
+
+.nsfImg {
+	width: 270px;
+	position: relative;
+}
+
+.nsfCount {
+	color: #505050;
+	font-size: 36pt;
+	margin: 0;
+	width: 240px;
+	position: absolute;
+	top: 30px;
+	right: 0;
+}
+
+#fundedCount {
+	position: relative;
+	width: 640px;
+	margin: 0 auto;
+}
+
+#reviews {
+	display: block;
+	color: #FFFFFF;
+	background-color: #505050;
+	padding: 30px 40px;
+	max-width: 580px;
+	margin: 0 auto;
+}
+
+@media(min-width: 1024px){
+	#reviews {
+		display: inline-block;
+	}
+}
+
+.reviewHead {
+	margin: 0 0 70px;
+	font-size: 34pt;
+}
+
+#usersCount {
+ color: #2BBFE6;	
+}
+
+#reviewList {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#reviewList > li {
+	position: relative;
+	min-height: 100px;
+}
+
+.quote {
+	display: inline-block;
+	/* width: 440px; */
+	position: absolute;
+	top: 0;
+	margin: 0;
+	font-size: 20pt;
+	font-weight: 300;
+}
+
+.quote .source {
+	display: block;
+}
+
+.userImg {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 0;
+}
+
+#reviewList > li:nth-child(n+1) {
+	margin-top: 80px;
+}
+
+#reviewList > li:last-child {
+	margin-bottom: 50px;
+}
+
+#reviewList > li:nth-child(odd) .userImg {
+	/* position: relative; */
+	left: 0;
+	right: auto;
+}
+
+#reviewList > li:nth-child(even) .userImg {
+	/* position: absolute; */
+	left: auto;
+	right: 0;
+}
+
+#reviewList > li:nth-child(odd) .quote {
+	/* position: absolute; */
+	/* left: auto; */
+	left: 120px;
+	right: 0;
+}
+
+#reviewList > li:nth-child(even) .quote {
+	/* position: relative; */
+	left: 0;
+	/* right: auto; */
+	right: 120px;
+}
+
+#moreInfo {
+	background-color: #F5F5F5;
+	padding: 40px;
+}
+
+.infoHeader{
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 26pt;
+	font-weight: 400;
+}
+
+#infoLinks {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#infoLinks > li {
+	margin-top: 23px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 20pt;
+}
+
+#infoLinks > li > a {
+	color: #2BBFE6;
+}

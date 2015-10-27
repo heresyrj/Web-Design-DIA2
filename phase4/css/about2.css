@@ -1,0 +1,481 @@
+#container {
+	min-width: 800px;
+}
+
+.page_title {
+	width: 70%;
+	font-size: 55px;
+	font-weight: 600;
+	line-height: 55px;
+	position: relative;
+	color: #FFFFFF;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#fold {
+	height: 428px;
+	width: 100%;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background-image: url('../images/about%20dia2%20-%20blur%20interface.png');
+}
+
+#gradient {
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	margin: 0;
+	background: #448660; /* Old browsers */ /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#448660), color-stop(50%,#20aeae), color-stop(100%,#3e4d7f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  #448660 0%,#20aeae 50%,#3e4d7f 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
+	background: -webkit-linear-gradient(45deg, #448660 0%, #20aeae 50%, #3e4d7f 100%);
+	background: linear-gradient(45deg,  #448660 0%,#20aeae 50%,#3e4d7f 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448660', endColorstr='#3e4d7f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	opacity: .9;
+}
+
+.dots {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	background: url('../images/dot_background.png');
+	background-repeat: repeat;
+}
+
+.aboutCopy {
+	width: 70%;
+	position: relative;
+	margin: 21px auto 0;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 26px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.about_underline {
+	width: 76px;
+	height: 0;
+	position: relative;
+	border-bottom: 4px solid #FFFFFF;
+	margin: 27px auto 41px;
+}
+
+.center_me {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.center_child:before {
+	content: '';
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -5px;
+}
+
+#stats {
+	height: 550px;
+	margin: 0;
+	padding: 51px 0 0 0;
+	background-color: #F7F7F7;
+}
+
+.statsCopy {
+	font-size: 24px;
+	font-weight: 300;
+	color: #505050;
+	line-height: 30px;
+	margin: 0;
+	/*
+	position: absolute;
+	top: 0;
+	left: 153px;
+	right: 0;
+	*/
+}
+
+@media(max-width: 959px){
+	.statsCopy {
+		font-size: 20px;
+	}
+}
+
+#stats_copy_section {
+	width: 70%;
+	margin: 0 auto 50px;
+	position: relative;
+}
+
+.statsImg {
+	display: block;
+	/* float: left; */
+	margin: 0 auto 20px;
+	width: 78px;
+}
+
+#horiz_divider {
+	height: 2px;
+	background: url('../images/about%20dia2%20-%20horizontal%20dot%20line.png');
+	background-repeat: repeat-x;
+}
+
+#user_statistics {
+	width: 70%;
+	margin: 0 auto;
+	padding: 0 0 20px;
+}
+
+#hits_box,
+#queries_box {
+	display: inline-block;
+	width: 50%;
+	padding-top: 50px;
+}
+
+#hits_box {
+	/* padding-right: 124px; */
+}
+
+#queries_box {
+	/* padding-left: 124px; */
+	background: url('../images/about%20dia2%20-%20vertical%20dot%20line.png');
+	background-repeat: repeat-y;
+}
+
+.stat_numbers {
+	display: block;
+	font-size: 48px;
+	font-weight: 600;
+	color: #505050;
+	margin: 0px 0 24px auto;
+	
+	text-align: center;
+}
+
+@media(max-width: 1279px) and (min-width: 1020px){
+	.stat_numbers {
+		font-size: 40px;
+	}
+}
+
+@media(max-width: 1019px) and (min-width: 960px){
+	.stat_numbers{
+		font-size: 36px;
+	}
+}
+
+@media(max-width: 959px) and (min-width: 800px){
+	.stat_numbers {
+		font-size: 32px;
+	}
+}
+
+@media(max-width: 799px){
+	.stat_numbers {
+		font-size: 28px;
+	}
+}
+
+/* 
+#hits_box > .stat_numbers {
+	text-align: right;
+	margin: 0 124px 24px 0;
+}
+
+#queries_box > .stat_numbers {
+	margin: 0 0 24px 124px;
+}
+
+*/
+
+.stat_units {
+	font-size: 30px;
+	font-weight: 100;
+	color: #505050;
+	text-align: center;
+	display: block;
+	/* margin: 0 0 30px; */
+}
+
+/* 
+#hits_box > .stat_units {
+	margin-right: 62px;
+}
+
+#queries_box > .stat_units {
+	margin-left: 16px;
+}
+
+*/
+
+#grants {
+	padding: 90px 0;
+	background-color: #EEEEEE;
+}
+
+.grantsHeader {
+	font-size: 50px;
+	font-weight: 600;
+	text-align: center;
+	color: #505050;
+	margin: 0 0 55px;
+}
+
+#grantBoxes {
+	width: 948px;
+	margin: 0 auto;
+}
+
+.statTime {
+	font-size: 22px;
+	color: #505050;
+	text-align: center;
+	margin-top: 0;
+}
+
+.horizBorders {
+	height: 194px;
+  width: 210px;
+	display: inline-block;
+	margin: 0 18px;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+  /* box-sizing: border-box; */
+}
+
+.horizBorders:first-child {
+	margin-left: 0;
+}
+
+.horizBorders:last-child {
+	margin-right: 0;
+}
+
+@media(max-width: 959px){
+	
+	#grantBoxes {
+		width: 456px;
+	}
+	
+	.horizBorders:first-child,
+	.horizBorders:nth-child(2) {
+		margin-bottom: 50px;
+	}
+	
+	.horizBorders:nth-child(2n){
+		margin-right: 0;
+	}
+	
+	.horizBorders:nth-child(2n+1){
+		margin-left: 0;
+	}
+}
+
+.vertBorders {
+	height: 210px;
+  width: 194px;
+  border-left: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
+  /* box-sizing: border-box; */
+	margin: -8px 8px;
+}
+
+.vertBorders:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 210px;
+	width: 0;
+	margin-left: -7px;
+}
+
+.grantContent {
+	vertical-align: middle;
+	margin: 0 auto;
+	display: inline-block;
+	width: 194px;
+}
+
+.grantImg {
+	height: 54px;
+	display: block;
+	margin: 0 auto 45px;
+}
+
+.grantNumber {
+	font-size: 20px;
+	font-weight: 400;
+	color: #505050;
+	text-align: center;
+	margin: 0;
+}
+
+#teamSection {
+	height: 680px;
+	background: #00b0b0; /* Old browsers */ /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#00b0b0), color-stop(0%,#1e5799), color-stop(50%,#2ab56f), color-stop(75%,#4dc0db), color-stop(100%,#2ab56f), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  #00b0b0 0%,#1e5799 0%,#2ab56f 50%,#4dc0db 75%,#2ab56f 100%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
+	background: -webkit-linear-gradient(45deg, #00b0b0 0%, #1e5799 0%, #2ab56f 50%, #4dc0db 75%, #2ab56f 100%, #7db9e8 100%);
+	background: linear-gradient(45deg,  #00b0b0 0%,#1e5799 0%,#2ab56f 50%,#4dc0db 75%,#2ab56f 100%,#7db9e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b0b0', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	/* padding: 55px 0 0; */
+	padding: 0;
+	position: relative;
+}
+
+.teamHeader {
+	font-size: 50px;
+	font-weight: 600;
+	color: #FFFFFF;
+	text-align: center;
+	padding-top: 55px;
+	margin: 0 0 27px;
+	position: relative;
+}
+
+#team {
+	list-style: none;
+	padding: 0;
+	position: relative;
+	/* width: 800px; */
+	width: 600px;
+	margin: 0 auto;
+}
+
+#team > li {
+	display: inline-block;
+	margin: 5px;
+	position: relative;
+	box-shadow: 0 0 3px 2px rgba(0, 0, 0, .1); 
+}
+
+#team > li:nth-child(4n+1) {
+	/* margin-left: 5px; */
+}
+
+#team > li:nth-child(4n) {
+	/* margin-right: 5px; */
+}
+
+.large {
+	display: inline-block;
+}
+
+.small {
+	display: none;
+}
+
+.institution {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+.teamInfo {
+	width: 190px;
+	height: 190px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-top: 20px;
+	background-color: rgba(0, 0, 0, .5);
+	opacity: 0;
+	-webkit-transition: opacity 500ms ease-in;
+	transition: opacity 500ms ease-in;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.teamInfo:hover {
+	opacity: 1;
+}
+
+.teamTitle {
+	font-size: 14px;
+	font-weight: 600;
+	color: #FFFFFF;
+	text-align: center;
+	margin: 0;
+}
+
+.littleUnderline {
+	width: 34px;
+	height: 0;
+	margin: 20px auto 12px;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.teamName {
+	font-size: 14px;
+	font-weight: 800;
+	line-height: 24px;
+	color: #FFFFFF;
+	text-align: center;
+	margin: 0 auto 10px;
+}
+
+.teamPosition,
+.teamSchool {
+	font-size: 12px;
+	font-weight: 100;
+	color: #FFFFFF;
+	line-height: 18px;
+	text-align: center;
+	margin: 5px 0;
+}
+
+/*
+@media(max-width: 840px) {
+	
+	#team {
+		width: 640px;
+	}
+	
+	.large {
+		display: none;
+	}
+	
+	.small {
+		display: inline-block;
+	}
+	
+	.teamInfo {
+		width: 150px;
+		height: 150px;
+	}
+	
+	.littleUnderline {
+		margin: 10px auto 6px;
+	}
+	
+	.teamName {
+		line-height: 20px;
+	}
+	
+	.teamPosition,
+	.teamSchool {
+		line-height: 14px;
+	}
+}
+*/
+
+.tryPrompt {
+	font-size: 24px;
+	font-weight: 500;
+	color: #FFFFFF;
+	text-align: center;
+	margin: 0 0 13px;
+}
+
+#callToAction {
+	background-color: #052E40;
+	padding: 60px 0;
+}
+
+.launch {
+	margin: 0 auto;
+}
